@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 800" role="img" aria-labelledby="title desc">
+  <title id="title">Cityweight Crew sweatshirt</title>
+  <desc id="desc">A warm stone crewneck sweatshirt shown on a soft retail backdrop.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0%" x2="100%" y1="0%" y2="100%">
+      <stop offset="0%" stop-color="#f4eee6"/>
+      <stop offset="100%" stop-color="#e4d5c5"/>
+    </linearGradient>
+    <linearGradient id="cloth" x1="0%" x2="100%" y1="0%" y2="100%">
+      <stop offset="0%" stop-color="#d8c7b4"/>
+      <stop offset="100%" stop-color="#b49f8b"/>
+    </linearGradient>
+  </defs>
+  <rect width="640" height="800" fill="url(#bg)"/>
+  <circle cx="164" cy="170" r="124" fill="#ffffff" fill-opacity=".34"/>
+  <circle cx="516" cy="628" r="150" fill="#c9d9cf" fill-opacity=".24"/>
+  <ellipse cx="320" cy="674" rx="178" ry="52" fill="#8b7057" fill-opacity=".12"/>
+  <path d="M235 178c35-36 135-36 170 0l58 90-64 46-24-44v296H265V270l-24 44-64-46 58-90z" fill="url(#cloth)"/>
+  <path d="M252 180c18 22 118 22 136 0 10 9 15 17 17 34-47 18-123 18-170 0 2-17 7-25 17-34z" fill="#c3b19d"/>
+  <path d="M190 287l74 54v162c-33-29-65-82-82-141 4-27 6-48 8-75z" fill="#b7a08b"/>
+  <path d="M450 341l74-54c2 27 4 48 8 75-17 59-49 112-82 141V341z" fill="#b7a08b"/>
+  <rect x="287" y="252" width="66" height="18" rx="9" fill="#a88f7a"/>
+  <rect x="262" y="566" width="116" height="26" rx="13" fill="#aa917d"/>
+  <rect x="194" y="491" width="32" height="62" rx="16" fill="#ab937f"/>
+  <rect x="414" y="491" width="32" height="62" rx="16" fill="#ab937f"/>
+</svg>

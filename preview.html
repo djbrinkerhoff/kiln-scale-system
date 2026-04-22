@@ -1,0 +1,477 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Storefront Token System Preview</title>
+    <link rel="stylesheet" href="./cms-design-system.css?v=20260422-user-base-fix">
+    <script defer src="./preview.js?v=20260422-user-base-fix"></script>
+  </head>
+  <body class="preview-body" data-preview-sizing="fluid">
+    <header class="preview-toolbar">
+      <div class="preview-toolbar-inner storefront-grid">
+        <div class="preview-controls preview-toolbar-panel span-full">
+          <label for="merchant-base-control">User base size</label>
+          <div class="preview-toolbar-content">
+            <div class="preview-toolbar-main">
+              <div class="preview-range-row">
+                <input
+                  id="merchant-base-control"
+                  data-base-slider
+                  type="range"
+                  min="14"
+                  max="18"
+                  step="0.1"
+                >
+                <output class="preview-readout" data-base-output for="merchant-base-control"></output>
+                <button class="preview-reset" data-base-reset type="button">Reset to 16px</button>
+              </div>
+              <p class="preview-safe-range">
+                Safe storefront range is 14px to 18px. The user changes the base, and every
+                computed type and spacing token recalculates from there.
+              </p>
+            </div>
+            <div class="preview-toggle-rail">
+              <div class="preview-control-row">
+                <label class="preview-toggle" for="preview-sizing-toggle">
+                  <input
+                    checked
+                    class="preview-toggle-input"
+                    id="preview-sizing-toggle"
+                    data-sizing-toggle
+                    type="checkbox"
+                  >
+                  <span class="preview-toggle-control" aria-hidden="true"></span>
+                  <span class="preview-toggle-copy">
+                    <span class="preview-toggle-title">Fluid sizing</span>
+                    <span class="preview-toggle-note">
+                      On: viewport contributes to type and spacing. Off: values resolve from merchant
+                      base only.
+                    </span>
+                  </span>
+                </label>
+              </div>
+              <div class="preview-control-row">
+                <label class="preview-toggle" for="grid-overlay-toggle">
+                  <input
+                    class="preview-toggle-input"
+                    id="grid-overlay-toggle"
+                    data-grid-toggle
+                    type="checkbox"
+                  >
+                  <span class="preview-toggle-control" aria-hidden="true"></span>
+                  <span class="preview-toggle-copy">
+                    <span class="preview-toggle-title">Show grid visualizer</span>
+                    <span class="preview-toggle-note">
+                      Preview-only overlay aligned to the section container and grid gap.
+                    </span>
+                  </span>
+                </label>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <div class="preview-grid-overlay" hidden aria-hidden="true">
+      <div class="preview-grid-overlay-frame">
+        <div class="preview-grid-overlay-columns">
+          <span class="preview-grid-column"></span>
+          <span class="preview-grid-column"></span>
+          <span class="preview-grid-column"></span>
+          <span class="preview-grid-column"></span>
+          <span class="preview-grid-column"></span>
+          <span class="preview-grid-column"></span>
+          <span class="preview-grid-column"></span>
+          <span class="preview-grid-column"></span>
+          <span class="preview-grid-column"></span>
+          <span class="preview-grid-column"></span>
+          <span class="preview-grid-column"></span>
+          <span class="preview-grid-column"></span>
+        </div>
+      </div>
+    </div>
+
+    <main class="preview-main">
+      <section class="section-container preview-section">
+        <div class="storefront-grid preview-hero-layout">
+          <article class="preview-surface preview-hero-card span-full span-lg-8">
+            <div class="preview-hero-copy">
+              <p class="text-meta">Storefront Builder Token System</p>
+              <h2 class="hero-title">Two type ramps, one user base, conservative fluid spacing.</h2>
+              <p class="hero-body">
+                The UI ramp handles product titles, price, filters, forms, cart, and support
+                copy. The display ramp handles hero messaging and section-level merchandising
+                without letting storefront headings run away.
+              </p>
+            </div>
+
+            <div class="preview-pill-row" aria-label="Hero metadata">
+              <span class="preview-pill">UI ramp</span>
+              <span class="preview-pill">Constrained display ramp</span>
+              <span class="preview-pill">Base-derived spacing</span>
+            </div>
+
+            <div class="preview-cta-row">
+              <button class="preview-button" type="button">Shop New Arrivals</button>
+              <button class="preview-button-secondary" type="button">Explore Layers</button>
+            </div>
+          </article>
+
+          <aside class="preview-surface preview-token-panel span-full span-lg-4">
+            <p class="text-meta">Computed token snapshot</p>
+            <ul class="preview-token-list">
+              <li data-token="--text-body">
+                <span class="preview-token-name">Body text</span>
+                <span class="preview-token-value" data-token-output></span>
+                <span class="preview-token-note">UI ramp for everyday storefront copy.</span>
+              </li>
+              <li data-token="--hero-title">
+                <span class="preview-token-name">Hero title</span>
+                <span class="preview-token-value" data-token-output></span>
+                <span class="preview-token-note">Display ramp for homepage and promo messaging.</span>
+              </li>
+              <li data-token="--product-price">
+                <span class="preview-token-name">Product price</span>
+                <span class="preview-token-value" data-token-output></span>
+                <span class="preview-token-note">Mapped from the UI ramp, not its own price scale.</span>
+              </li>
+              <li data-token="--section-gap">
+                <span class="preview-token-name">Section gap</span>
+                <span class="preview-token-value" data-token-output></span>
+                <span class="preview-token-note">Fluid spacing stays conservative as the base changes.</span>
+              </li>
+            </ul>
+          </aside>
+        </div>
+      </section>
+
+      <section class="section-container preview-section">
+        <div class="storefront-grid preview-product-layout">
+        <div class="preview-section-header span-full">
+          <p class="text-meta">PLP and collection surfaces</p>
+          <h2 class="section-heading">Product cards, filters, and prices stay on the UI ramp.</h2>
+          <p>
+            Product titles and pricing need clear hierarchy, but they also need to stay compact
+            across dense grids. The UI ramp gives that control without a special-purpose price
+            primitive.
+          </p>
+        </div>
+
+          <article class="preview-surface product-card span-full span-lg-3">
+            <div class="product-card-media">
+              <img
+                class="preview-media-image"
+                src="./assets/generated-storefront/cityweight-crew.png"
+                alt="Cityweight Crew sweatshirt in warm stone cotton"
+              >
+            </div>
+            <div class="product-card-copy">
+              <p class="text-meta">Organic cotton / 4 colors</p>
+              <h3 class="product-card-title">Cityweight Crew</h3>
+              <p class="text-body">
+                Soft structure for everyday layering with a clean neckline and slightly cropped fit.
+              </p>
+              <div class="product-card-pricing">
+                <span class="product-card-price">$78</span>
+                <span class="compare-at-price">$98</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="preview-surface product-card span-full span-lg-3">
+            <div class="product-card-media">
+              <img
+                class="preview-media-image"
+                src="./assets/generated-storefront/transit-shell.png"
+                alt="Transit Shell jacket in muted olive nylon"
+              >
+            </div>
+            <div class="product-card-copy">
+              <p class="text-meta">Recycled nylon / Water resistant</p>
+              <h3 class="product-card-title">Transit Shell</h3>
+              <p class="text-body">
+                Packable outer layer designed for commuter weather, overnight trips, and light rain.
+              </p>
+              <div class="product-card-pricing">
+                <span class="product-card-price">$148</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="preview-surface product-card span-full span-lg-3">
+            <div class="product-card-media">
+              <img
+                class="preview-media-image"
+                src="./assets/generated-storefront/weekend-scarf.png"
+                alt="Weekend Scarf folded in soft merino knit"
+              >
+            </div>
+            <div class="product-card-copy">
+              <p class="text-meta">Merino blend / Limited edition</p>
+              <h3 class="product-card-title">Weekend Scarf</h3>
+              <p class="text-body">
+                Lighter weight knit with enough structure to sit cleanly under coats and overshirts.
+              </p>
+              <div class="product-card-pricing">
+                <span class="product-card-price">$54</span>
+                <span class="compare-at-price">$68</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="preview-surface product-card span-full span-lg-3">
+            <div class="product-card-media">
+              <img
+                class="preview-media-image"
+                src="./assets/generated-storefront/field-weekender.png"
+                alt="Field Weekender duffel in dark leather"
+              >
+            </div>
+            <div class="product-card-copy">
+              <p class="text-meta">Full grain leather / Carry-on ready</p>
+              <h3 class="product-card-title">Field Weekender</h3>
+              <p class="text-body">
+                Structured holdall with split internal storage and detachable strap for quick airport moves.
+              </p>
+              <div class="product-card-pricing">
+                <span class="product-card-price">$248</span>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="section-container preview-section">
+        <div class="storefront-grid preview-pdp-layout">
+        <div class="preview-section-header span-full">
+          <p class="text-meta">PDP and purchase flow</p>
+          <h2 class="section-heading">Display for the product title, UI ramp for the rest.</h2>
+          <p>
+            A PDP still benefits from a more present title, but the price, options, CTA, and help
+            copy should remain closer to UI text so the purchase surface stays efficient.
+          </p>
+        </div>
+
+          <article class="preview-surface preview-pdp-gallery span-full span-lg-7">
+            <div class="preview-product-media">
+              <img
+                class="preview-media-image"
+                src="./assets/generated-storefront/modular-carryall-front.png"
+                alt="Modular Carryall shown from the front"
+              >
+            </div>
+            <div class="preview-detail-media">
+              <img
+                class="preview-media-image"
+                src="./assets/generated-storefront/modular-carryall-detail.png"
+                alt="Detail crop of the Modular Carryall strap and pocket"
+              >
+            </div>
+          </article>
+
+          <article class="preview-surface preview-pdp-copy span-full span-lg-5">
+            <div class="preview-stack">
+              <p class="text-meta">PDP title + price</p>
+              <h3 class="pdp-title">Modular Carryall</h3>
+              <p class="pdp-price">$148</p>
+              <p class="text-body">
+                A structured travel bag with separate laptop sleeve, garment compartment, and quick-grab
+                essentials pocket. Built for short trips, daily commuting, and overhead-bin sanity.
+              </p>
+            </div>
+
+            <div class="preview-option-group">
+              <p class="text-meta">Color</p>
+              <div class="preview-swatch-row" aria-label="Available colors">
+                <button class="preview-swatch" data-tone="ink" type="button" aria-label="Ink"></button>
+                <button class="preview-swatch" data-tone="sand" type="button" aria-label="Sand"></button>
+                <button class="preview-swatch" data-tone="olive" type="button" aria-label="Olive"></button>
+              </div>
+            </div>
+
+            <div class="preview-option-group">
+              <p class="text-meta">Strap length</p>
+              <div class="preview-size-row" aria-label="Available lengths">
+                <span class="preview-size-pill">S</span>
+                <span class="preview-size-pill">M</span>
+                <span class="preview-size-pill">L</span>
+              </div>
+            </div>
+
+            <ul class="preview-benefit-list text-body">
+              <li>Free exchanges within 30 days</li>
+              <li>Reinforced base panel and weather-sealed zip</li>
+              <li>Ships in recycled protective dust bag</li>
+            </ul>
+
+            <div class="preview-cta-row">
+              <button class="preview-button" type="button">Add to Cart</button>
+              <button class="preview-button-secondary" type="button">Save for Later</button>
+            </div>
+
+            <div class="preview-cart-note">
+              <p class="text-meta">Cart and utility UI</p>
+              <p class="text-body">
+                Utility UI, labels, and support copy stay on the UI ramp so nav, forms, account,
+                and cart surfaces remain compact as merchants change the base size.
+              </p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="section-container preview-section">
+        <div class="storefront-grid preview-code-layout">
+        <div class="preview-section-header span-full">
+          <p class="text-meta">CMS flow wrapper</p>
+          <h2 class="section-heading">Unknown markup stays bounded without brittle editorial assumptions.</h2>
+          <p>
+            The wrapper below uses plain headings, paragraphs, and lists. Body copy stays on a
+            conservative reading measure while display-style headings get a looser, balanced cap.
+          </p>
+        </div>
+
+        <article class="preview-surface storefront-flow span-full span-lg-7">
+          <h2>Layered offers can open up more than paragraph copy without running too wide.</h2>
+          <p>
+            This paragraph is plain CMS markup inside <code>.storefront-flow</code>. It uses the
+            bounded body-copy measure, responds to the width the card actually receives, and wraps
+            long strings safely instead of assuming polished editorial input.
+          </p>
+          <h3>Subsections keep some presentation flexibility while body text stays steady.</h3>
+          <p>
+            Long support links such as
+            <a href="https://example.com/help/returns/spring-collection/weekend-carryall/extended-color-release-and-shipping-updates">
+              example.com/help/returns/spring-collection/weekend-carryall/extended-color-release-and-shipping-updates
+            </a>
+            should still wrap cleanly inside whatever column the CMS gives them.
+          </p>
+          <h4>Smaller headings stay more conservative.</h4>
+          <p>
+            They do not inherit the broadest display treatment, so mixed-quality content does not
+            collapse into oversized, brittle stacks.
+          </p>
+          <ul>
+            <li>Body measure stays readability-first.</li>
+            <li>Display headings balance within bounded limits.</li>
+            <li>Unknown strings and CMS content still degrade gracefully.</li>
+          </ul>
+        </article>
+
+        <div class="preview-code-block span-full span-lg-5">
+          <code>&lt;article class="storefront-flow"&gt;
+  &lt;h2&gt;Layered offers can open up more than paragraph copy.&lt;/h2&gt;
+  &lt;p&gt;Plain CMS paragraphs keep a bounded body measure and wrap safely.&lt;/p&gt;
+
+  &lt;h3&gt;Subsections stay flexible.&lt;/h3&gt;
+  &lt;p&gt;Long URLs and merchant-authored content still break cleanly.&lt;/p&gt;
+
+  &lt;h4&gt;Smaller headings stay conservative.&lt;/h4&gt;
+  &lt;ul&gt;
+    &lt;li&gt;Body copy stays readability-first.&lt;/li&gt;
+    &lt;li&gt;Display headings stay balanced.&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/article&gt;</code>
+        </div>
+        </div>
+      </section>
+
+      <section class="section-container preview-section">
+        <div class="storefront-grid">
+          <article class="preview-surface preview-ramp-card span-full">
+            <div class="preview-ramp-header">
+              <p class="text-meta">Full size ramp</p>
+              <h2 class="section-heading">Every type size, shown in one card.</h2>
+              <p class="text-body">
+                The UI ramp stays compact for commerce surfaces, while the display ramp opens up
+                for merchandising and section-level emphasis.
+              </p>
+            </div>
+
+            <div class="preview-ramp-group">
+              <p class="preview-ramp-group-label">UI ramp</p>
+
+              <div class="preview-ramp-item" style="--sample-size: var(--font-ui-2xs); --sample-line-height: var(--lh-ui); --sample-letter-spacing: 0.01em; --sample-measure: var(--measure-body);">
+                <div class="preview-ramp-meta">
+                  <p class="preview-ramp-label">UI 2XS</p>
+                  <p class="preview-ramp-note">Caption / compact legal</p>
+                </div>
+                <p class="preview-ramp-sample">Caption text, compact notes, and tiny utility labels.</p>
+              </div>
+
+              <div class="preview-ramp-item" style="--sample-size: var(--font-ui-xs); --sample-line-height: var(--lh-ui); --sample-letter-spacing: 0.01em; --sample-measure: var(--measure-body);">
+                <div class="preview-ramp-meta">
+                  <p class="preview-ramp-label">UI XS</p>
+                  <p class="preview-ramp-note">Meta / stock and delivery hints</p>
+                </div>
+                <p class="preview-ramp-sample">Meta text for stock notes, delivery windows, and support hints.</p>
+              </div>
+
+              <div class="preview-ramp-item" style="--sample-size: var(--font-ui-sm); --sample-line-height: var(--lh-ui); --sample-letter-spacing: 0.01em; --sample-measure: var(--measure-body);">
+                <div class="preview-ramp-meta">
+                  <p class="preview-ramp-label">UI SM</p>
+                  <p class="preview-ramp-note">Labels / nav and filters</p>
+                </div>
+                <p class="preview-ramp-sample">Filter labels, nav meta, and small interface copy.</p>
+              </div>
+
+              <div class="preview-ramp-item" style="--sample-size: var(--font-ui-md); --sample-line-height: var(--lh-body); --sample-measure: var(--measure-body);">
+                <div class="preview-ramp-meta">
+                  <p class="preview-ramp-label">UI MD</p>
+                  <p class="preview-ramp-note">Body / default storefront copy</p>
+                </div>
+                <p class="preview-ramp-sample">Body copy for product details, help text, and support content.</p>
+              </div>
+
+              <div class="preview-ramp-item" style="--sample-size: var(--font-ui-lg); --sample-line-height: var(--lh-tight); --sample-letter-spacing: var(--ls-strong); --sample-weight: 600; --sample-measure: var(--measure-body);">
+                <div class="preview-ramp-meta">
+                  <p class="preview-ramp-label">UI LG</p>
+                  <p class="preview-ramp-note">UI heading</p>
+                </div>
+                <p class="preview-ramp-sample">Bigger</p>
+              </div>
+
+              <div class="preview-ramp-item" style="--sample-size: var(--font-ui-xl); --sample-line-height: var(--lh-tight); --sample-letter-spacing: var(--ls-strong); --sample-weight: 700; --sample-measure: var(--measure-body);">
+                <div class="preview-ramp-meta">
+                  <p class="preview-ramp-label">UI XL</p>
+                  <p class="preview-ramp-note">Biggest</p>
+                </div>
+                <p class="preview-ramp-sample">UI heading the same size as Display SM</p>
+              </div>
+            </div>
+
+            <div class="preview-ramp-group">
+              <p class="preview-ramp-group-label">Display ramp</p>
+
+              <div class="preview-ramp-item" style="--sample-font: 'Iowan Old Style', 'Palatino Linotype', Georgia, serif; --sample-size: var(--font-display-sm); --sample-line-height: var(--lh-heading); --sample-letter-spacing: var(--ls-heading); --sample-measure: var(--measure-display-wide);">
+                <div class="preview-ramp-meta">
+                  <p class="preview-ramp-label">Display SM</p>
+                  <p class="preview-ramp-note">Section heading</p>
+                </div>
+                <p class="preview-ramp-sample">Section heading</p>
+              </div>
+
+              <div class="preview-ramp-item" style="--sample-font: 'Iowan Old Style', 'Palatino Linotype', Georgia, serif; --sample-size: var(--font-display-md); --sample-line-height: var(--lh-heading); --sample-letter-spacing: var(--ls-heading); --sample-measure: var(--measure-display-wide);">
+                <div class="preview-ramp-meta">
+                  <p class="preview-ramp-label">Display MD</p>
+                  <p class="preview-ramp-note">PDP title / section hero</p>
+                </div>
+                <p class="preview-ramp-sample">PDP title</p>
+              </div>
+
+              <div class="preview-ramp-item" style="--sample-font: 'Iowan Old Style', 'Palatino Linotype', Georgia, serif; --sample-size: var(--font-display-lg); --sample-line-height: var(--lh-display); --sample-letter-spacing: var(--ls-display); --sample-measure: var(--measure-display);">
+                <div class="preview-ramp-meta">
+                  <p class="preview-ramp-label">Display LG</p>
+                  <p class="preview-ramp-note">Homepage hero</p>
+                </div>
+                <p class="preview-ramp-sample">Hero title</p>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

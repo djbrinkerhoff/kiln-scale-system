@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 900" role="img" aria-labelledby="title desc">
+  <title id="title">Modular Carryall front view</title>
+  <desc id="desc">The modular carryall shown front-facing with straps and front pocket.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0%" x2="100%" y1="0%" y2="100%">
+      <stop offset="0%" stop-color="#f2eee8"/>
+      <stop offset="100%" stop-color="#dde6de"/>
+    </linearGradient>
+    <linearGradient id="bag" x1="0%" x2="100%" y1="0%" y2="100%">
+      <stop offset="0%" stop-color="#47556c"/>
+      <stop offset="100%" stop-color="#2f3a4f"/>
+    </linearGradient>
+  </defs>
+  <rect width="720" height="900" fill="url(#bg)"/>
+  <circle cx="132" cy="152" r="132" fill="#ffffff" fill-opacity=".28"/>
+  <circle cx="600" cy="742" r="176" fill="#d0bfaa" fill-opacity=".22"/>
+  <ellipse cx="360" cy="768" rx="214" ry="66" fill="#334058" fill-opacity=".12"/>
+  <path d="M214 258c0-56 40-100 92-100h108c52 0 92 44 92 100v420c0 34-28 62-62 62H276c-34 0-62-28-62-62V258z" fill="url(#bag)"/>
+  <path d="M296 214c12-62 41-100 64-100s52 38 64 100h-30c-8-38-19-58-34-58s-26 20-34 58h-30z" fill="#2d3749"/>
+  <path d="M274 214h172c15 0 28 13 28 28v35H246v-35c0-15 13-28 28-28z" fill="#5f6d86"/>
+  <rect x="262" y="314" width="196" height="210" rx="28" fill="#5a6780"/>
+  <rect x="292" y="344" width="136" height="148" rx="20" fill="#73809a"/>
+  <rect x="328" y="348" width="64" height="32" rx="16" fill="#2d3749"/>
+  <rect x="244" y="552" width="232" height="100" rx="28" fill="#3a465d"/>
+  <rect x="254" y="562" width="212" height="80" rx="24" fill="#46546d"/>
+  <rect x="346" y="214" width="28" height="526" rx="14" fill="#263043"/>
+  <circle cx="360" cy="474" r="8" fill="#d2d8e1"/>
+</svg>

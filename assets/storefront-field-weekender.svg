@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 800" role="img" aria-labelledby="title desc">
+  <title id="title">Field Weekender duffel</title>
+  <desc id="desc">A structured leather weekender bag on a warm retail display surface.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0%" x2="100%" y1="0%" y2="100%">
+      <stop offset="0%" stop-color="#f0ebe5"/>
+      <stop offset="100%" stop-color="#d8cec2"/>
+    </linearGradient>
+    <linearGradient id="bag" x1="0%" x2="100%" y1="0%" y2="100%">
+      <stop offset="0%" stop-color="#58443a"/>
+      <stop offset="100%" stop-color="#2f241f"/>
+    </linearGradient>
+  </defs>
+  <rect width="640" height="800" fill="url(#bg)"/>
+  <circle cx="150" cy="170" r="116" fill="#ffffff" fill-opacity=".3"/>
+  <circle cx="506" cy="638" r="138" fill="#d4dccc" fill-opacity=".2"/>
+  <ellipse cx="320" cy="664" rx="192" ry="54" fill="#2b211c" fill-opacity=".12"/>
+  <rect x="144" y="334" width="352" height="208" rx="40" fill="url(#bag)"/>
+  <rect x="170" y="364" width="300" height="148" rx="28" fill="#43332c"/>
+  <path d="M237 314c6-58 34-92 83-92s77 34 83 92h-34c-5-38-20-58-49-58s-44 20-49 58h-34z" fill="#3c2d27"/>
+  <path d="M250 314c5-44 28-70 70-70s65 26 70 70h-26c-5-27-18-42-44-42s-39 15-44 42h-26z" fill="#8a7362"/>
+  <rect x="222" y="392" width="196" height="18" rx="9" fill="#7f6958"/>
+  <rect x="298" y="410" width="44" height="70" rx="14" fill="#7f6958"/>
+  <rect x="164" y="530" width="38" height="54" rx="12" fill="#3a2c25"/>
+  <rect x="438" y="530" width="38" height="54" rx="12" fill="#3a2c25"/>
+</svg>

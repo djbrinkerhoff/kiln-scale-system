@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 800" role="img" aria-labelledby="title desc">
+  <title id="title">Transit Shell jacket</title>
+  <desc id="desc">An olive weather shell with hood and zip placket on a studio backdrop.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0%" x2="100%" y1="0%" y2="100%">
+      <stop offset="0%" stop-color="#edf2ec"/>
+      <stop offset="100%" stop-color="#d5ddd3"/>
+    </linearGradient>
+    <linearGradient id="shell" x1="0%" x2="100%" y1="0%" y2="100%">
+      <stop offset="0%" stop-color="#7b8d78"/>
+      <stop offset="100%" stop-color="#556455"/>
+    </linearGradient>
+  </defs>
+  <rect width="640" height="800" fill="url(#bg)"/>
+  <circle cx="140" cy="180" r="128" fill="#ffffff" fill-opacity=".28"/>
+  <circle cx="546" cy="610" r="144" fill="#d6c8b2" fill-opacity=".26"/>
+  <ellipse cx="320" cy="688" rx="182" ry="56" fill="#51604f" fill-opacity=".14"/>
+  <path d="M215 214c39-43 171-43 210 0l52 102-66 38-26-48v276H255V306l-26 48-66-38 52-102z" fill="url(#shell)"/>
+  <path d="M255 212c15-42 45-66 65-66s50 24 65 66c-18 12-40 18-65 18s-47-6-65-18z" fill="#667866"/>
+  <rect x="309" y="235" width="22" height="348" rx="11" fill="#455344"/>
+  <rect x="278" y="326" width="72" height="18" rx="9" fill="#8ea08a" fill-opacity=".72"/>
+  <path d="M194 334l61 43v155c-23-18-53-70-70-124l9-74z" fill="#647463"/>
+  <path d="M446 377l61-43 9 74c-17 54-47 106-70 124V377z" fill="#647463"/>
+  <rect x="280" y="586" width="80" height="22" rx="11" fill="#455344" fill-opacity=".65"/>
+</svg>

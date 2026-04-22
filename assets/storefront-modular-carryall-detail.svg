@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 576" role="img" aria-labelledby="title desc">
+  <title id="title">Modular Carryall detail view</title>
+  <desc id="desc">Close-up of the modular carryall strap, stitching, and front pocket.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0%" x2="100%" y1="0%" y2="100%">
+      <stop offset="0%" stop-color="#e9efe9"/>
+      <stop offset="100%" stop-color="#d8e1d9"/>
+    </linearGradient>
+    <linearGradient id="bag" x1="0%" x2="100%" y1="0%" y2="100%">
+      <stop offset="0%" stop-color="#56647d"/>
+      <stop offset="100%" stop-color="#334058"/>
+    </linearGradient>
+  </defs>
+  <rect width="720" height="576" fill="url(#bg)"/>
+  <circle cx="124" cy="96" r="116" fill="#ffffff" fill-opacity=".26"/>
+  <circle cx="608" cy="454" r="132" fill="#c9b49c" fill-opacity=".16"/>
+  <path d="M100 106c104 16 189 63 258 143s143 151 262 202v125H100V106z" fill="#edf2ec" fill-opacity=".34"/>
+  <path d="M158 118c36-66 74-98 112-98s76 32 112 98l-28 16c-32-55-57-78-84-78s-52 23-84 78l-28-16z" fill="#2e394b"/>
+  <rect x="118" y="132" width="490" height="356" rx="42" fill="url(#bag)"/>
+  <rect x="148" y="168" width="430" height="220" rx="32" fill="#617089"/>
+  <rect x="182" y="204" width="172" height="118" rx="24" fill="#7a879f"/>
+  <rect x="390" y="182" width="124" height="24" rx="12" fill="#273043"/>
+  <rect x="390" y="224" width="168" height="18" rx="9" fill="#7d8aa2"/>
+  <rect x="390" y="258" width="150" height="18" rx="9" fill="#7d8aa2"/>
+  <rect x="390" y="292" width="114" height="18" rx="9" fill="#7d8aa2"/>
+  <rect x="278" y="132" width="30" height="356" rx="15" fill="#263043"/>
+  <g fill="none" stroke="#d5dbe6" stroke-dasharray="5 8" stroke-linecap="round" stroke-width="3" opacity=".72">
+    <path d="M160 166h406"/>
+    <path d="M160 454h406"/>
+    <path d="M180 150v320"/>
+  </g>
+</svg>
