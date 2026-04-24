@@ -546,15 +546,15 @@ select {
 
 .preview-toggle-rail {
   display: grid;
-  gap: var(--card-gap);
+  gap: var(--space-xs);
 }
 
 .preview-toggle {
   position: relative;
   display: grid;
   grid-template-columns: auto minmax(0, 1fr);
-  gap: var(--space-sm);
-  align-items: center;
+  gap: var(--space-xs);
+  align-items: start;
   cursor: pointer;
 }
 
@@ -566,8 +566,8 @@ select {
 
 .preview-toggle-control {
   position: relative;
-  inline-size: 48px;
-  block-size: 28px;
+  inline-size: 42px;
+  block-size: 24px;
   border-radius: 999px;
   background: #e8ddd0;
   box-shadow: inset 0 0 0 1px rgba(46, 38, 29, 0.1);
@@ -577,13 +577,14 @@ select {
 .preview-toggle-control::after {
   content: "";
   position: absolute;
-  top: 4px;
-  left: 4px;
-  inline-size: 20px;
-  block-size: 20px;
+  top: 50%;
+  left: 3px;
+  inline-size: 18px;
+  block-size: 18px;
   border-radius: 50%;
   background: #fff;
   box-shadow: 0 2px 8px rgba(46, 38, 29, 0.18);
+  transform: translateY(-50%);
   transition: transform 160ms ease;
 }
 
@@ -592,7 +593,7 @@ select {
 }
 
 .preview-toggle-input:checked + .preview-toggle-control::after {
-  transform: translateX(20px);
+  transform: translate(18px, -50%);
 }
 
 .preview-toggle-input:focus-visible + .preview-toggle-control {
@@ -1165,4 +1166,170 @@ select {
   .preview-grid-column:nth-child(n + 7) {
     display: none;
   }
+}
+
+/* Monochrome review mode */
+
+.preview-body {
+  color: #000;
+  background: #fff;
+}
+
+.preview-body *,
+.preview-body *::before,
+.preview-body *::after {
+  border-radius: 0 !important;
+  box-shadow: none !important;
+}
+
+.preview-toolbar {
+  backdrop-filter: none;
+  background: #fff;
+  border-bottom: 1px solid #000;
+}
+
+.preview-controls,
+.preview-surface,
+.preview-control-row,
+.preview-readout,
+.preview-pill,
+.preview-button,
+.preview-button-secondary,
+.preview-reset,
+.product-card-media,
+.preview-product-media,
+.preview-detail-media,
+.preview-size-pill,
+.preview-swatch,
+.preview-cart-note {
+  border-color: #000;
+  background: #fff;
+  color: #000;
+}
+
+.preview-controls {
+  border: 1px solid #000;
+}
+
+.preview-controls input {
+  accent-color: #000;
+}
+
+.preview-control-row {
+  padding: var(--space-xs) var(--space-sm);
+}
+
+.preview-readout,
+.preview-pill,
+.preview-button-secondary,
+.preview-cart-note {
+  border: 1px solid #000;
+}
+
+.preview-hero-card,
+.product-card-media,
+.preview-product-media,
+.preview-detail-media,
+.preview-cart-note {
+  background: #fff;
+}
+
+.preview-kicker,
+.preview-toolbar-copy p:last-child,
+.preview-controls > label,
+.preview-safe-range,
+.preview-toggle-title,
+.preview-toggle-note,
+.preview-token-name,
+.preview-token-value,
+.preview-token-note,
+.preview-section-header p:last-child,
+.preview-ramp-group-label,
+.preview-ramp-label,
+.preview-ramp-note,
+.preview-ramp-sample {
+  color: #000;
+}
+
+.preview-reset,
+.preview-button {
+  border: 1px solid #000;
+  background: #000;
+  color: #fff;
+}
+
+.preview-reset:hover,
+.preview-button:hover {
+  background: #fff;
+  color: #000;
+}
+
+.preview-reset:focus-visible,
+.preview-button:focus-visible,
+.preview-button-secondary:focus-visible,
+.preview-controls input[type="range"]:focus-visible,
+.preview-toggle-input:focus-visible + .preview-toggle-control,
+.preview-swatch:focus-visible {
+  outline: 2px solid #000;
+  outline-offset: 2px;
+}
+
+.preview-toggle-control {
+  border: 1px solid #000;
+  background: #fff;
+}
+
+.preview-toggle-control::after {
+  background: #000;
+}
+
+.preview-toggle-input:checked + .preview-toggle-control {
+  background: #000;
+}
+
+.preview-toggle-input:checked + .preview-toggle-control::after {
+  background: #fff;
+}
+
+.preview-grid-overlay-frame,
+.preview-grid-column {
+  border-color: #000;
+}
+
+.preview-grid-column {
+  background: rgba(0, 0, 0, 0.08);
+}
+
+.preview-media-image {
+  filter: grayscale(1) contrast(1.05);
+}
+
+.preview-swatch[data-tone="ink"] {
+  background: #000;
+}
+
+.preview-swatch[data-tone="sand"] {
+  background: #fff;
+}
+
+.preview-swatch[data-tone="olive"] {
+  background:
+    linear-gradient(135deg, #000 0 50%, #fff 50% 100%);
+}
+
+.preview-token-list li,
+.preview-ramp-group + .preview-ramp-group,
+.preview-ramp-item,
+.preview-control-row {
+  border-color: #000;
+}
+
+.preview-code-block {
+  border: 1px solid #000;
+  background: #000;
+  color: #fff;
+}
+
+.preview-code-block code {
+  color: #fff;
 }
